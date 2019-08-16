@@ -1,1 +1,1 @@
-# TelegramBot
+# Geliştirici Sohbetleri Telegram Botu
