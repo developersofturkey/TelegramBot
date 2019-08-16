@@ -16,7 +16,7 @@ $ git clone https://github.com/developersofturkey/TelegramBot # once repoyu clon
 $ cd TelegramBot # daha sonra reponun bulundugu klasore giriyoruz
 $ npm install # gereken node modulesleri kuruyoruz (Node.js gereklidir https://nodejs.org/en/ LTS surumunu indirmeniz tavsiye edilir...)
 # node modullerinin kurulumu bittikten sonra .env.example'ı .env olarak kopyalayın ve API_TOKEN= kısmına telegram botunuzun token'ini yazın
-$ npm run serve # botumuzu calistiriyoruz
+$ npm run dev # botumuzu calistiriyoruz
 ```
 ## Coding (Fun part)
 Herşeyden önce telegram ile haberleşmek için kullandığımız api linki: https://telegraf.js.org/
