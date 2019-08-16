@@ -5,4 +5,7 @@ Grubun amacı türkiyenin dört bir yanından geliştiricileri bir araya toplaya
 [Telegram Davet Linki](https://t.me/gelistiricisohbetleri)
 
 ## Bu proje ne işe yarıyor ?
-Birçok grup botlar tarafından yönetiliyor. Bizim grubumuzdaki botumuzu kendimiz yapalım dedik.  
+Birçok grup botlar tarafından yönetiliyor. Bizim grubumuzdaki botumuzu kendimiz yapalım dedik.
+
+## Gereksinimler
+pyTelegramBotAPI (https://github.com/eternnoir/pyTelegramBotAPI)
