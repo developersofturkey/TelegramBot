@@ -16,7 +16,7 @@ def send_message_new_member(message):
 
 
 @bot.message_handler(content_types=['left_chat_member'])
-def send_message_new_member(message):
+def send_message_leaving_member(message):
 	user_firstname = message.left_chat_member.first_name
 	bot.reply_to(message, "Görüşürüz <b>{}</b>, seni tanımak güzeldi !".format(user_firstname), parse_mode="HTML")
 
