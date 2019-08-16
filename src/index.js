@@ -1,11 +1,21 @@
-//const Telegraf = require('telegraf')
 require('dotenv').config()
+
 import Telegraf from 'telegraf'
+import path from 'path'
+import fs from 'fs'
 
 
 const bot = new Telegraf(process.env.API_TOKEN)
-bot.start((ctx) => ctx.reply('Welcome'))
-bot.help((ctx) => ctx.reply('Send me a sticker'))
-bot.on('sticker', (ctx) => ctx.reply('👍'))
-bot.hears('hi', (ctx) => ctx.reply('Hey there'))
+
+var normalizedPath = path.join(__dirname, "modules");
+
+fs.readdirSync(normalizedPath).forEach((file) => {
+    console.log(`Loading ${file}`)
+    let module = require("./modules/" + file);
+    module.default(bot)
+});
+
+
+// load modules
+
 bot.launch()
