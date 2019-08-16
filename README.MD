@@ -37,6 +37,20 @@ export default (bot) => {
 }
 // Event Type'lara https://telegraf.js.org/#/?id=update-types burdan ulaşabilirsiniz
 ```
+Session örneği
+```js
+import session from 'telegraf/session' // Telegraf kütüphanesinden session'u import ediyoruz
+// Session'u bir veri deposu olarak görebilirsiniz.
+// depolamak istediğimiz verileri session'a koyuyoruz veya oradan ulaşıyoruz
+export default (bot) => {
+    bot.use(session()) // Botumuza sessionu tanımlıyoruz
+    bot.on('text', (ctx) => { // Her mesaj geldiğinde
+        ctx.session.counter = ctx.session.counter || 0 // ctx.session.counter 'ı tanımlıyoruz
+        ctx.session.counter++; // ctx.session.counter'ı 1 arttır
+        return ctx.reply(`Message counter ${ctx.session.counter}`); // Ve son olarak mesaj kanalına yaz
+    })
+}
+```
 Daha fazla örnek eklenecektir.
 
 ## Contributions
