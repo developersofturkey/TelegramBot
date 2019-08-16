@@ -1,8 +1,13 @@
 import telebot # https://github.com/eternnoir/pyTelegramBotAPI
 import config # config.py
 from functions import only_group_filter
+import logging
 
 bot = telebot.TeleBot(config.API_TOKEN)
+
+
+logger = telebot.logger
+telebot.logger.setLevel(logging.DEBUG) # Outputs debug messages to console.
 
 @bot.message_handler(content_types=['new_chat_members'])
 def send_message_new_member(message):
@@ -16,4 +21,4 @@ def send_message_new_member(message):
 	bot.reply_to(message, "Görüşürüz <b>{}</b>, seni tanımak güzeldi !".format(user_firstname), parse_mode="HTML")
 
 
-bot.polling()
+bot.polling(timeout=1)
