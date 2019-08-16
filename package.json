@@ -1,0 +1,28 @@
+{
+  "name": "telegrambot",
+  "version": "1.0.0",
+  "description": "Brain for Birdperson telegram bot developed by Turkish Developers",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developersofturkey/TelegramBot.git"
+  },
+  "keywords": [
+    "Telegram",
+    "Bot",
+    "Telegrambot",
+    "Birdperson"
+  ],
+  "author": "mentalrob & haliliceylan",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/developersofturkey/TelegramBot/issues"
+  },
+  "homepage": "https://github.com/developersofturkey/TelegramBot#readme",
+  "dependencies": {
+    "telegraf": "^3.32.0"
+  }
+}
