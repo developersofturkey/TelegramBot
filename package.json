@@ -29,6 +29,7 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "fs": "0.0.1-security",
+    "mathjs": "^6.0.4",
     "path": "^0.12.7",
     "telegraf": "^3.32.0"
   },
