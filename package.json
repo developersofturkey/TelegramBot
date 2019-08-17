@@ -5,10 +5,12 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d dist",
+    "only-build": "babel src -d dist",
+    "build": "npm run clean && npm run only-build",
     "start": "node ./dist/index.js",
     "serve": "npm run build && npm run start",
-    "dev": "nodemon --watch src --exec npm run serve"
+    "dev": "nodemon --watch src --exec npm run serve",
+    "clean": "node ./clean.js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +40,7 @@
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "clean-dir": "^1.0.3",
     "nodemon": "^1.19.1"
   }
 }
