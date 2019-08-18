@@ -1,10 +1,11 @@
 export default (bot) => {
     bot.on('new_chat_members', (ctx) => { // yeni bir üye gruba katıldığında
-        var username = ctx.message.new_chat_member.first_name  // context'den kullanıcının adını alıyoruz
+        var username = ctx.message.new_chat_member.username  // context'den kullanıcının adını alıyoruz
+        var username = `<a href="tg://user?id=${ctx.message.new_chat_member.id}">@${ctx.message.new_chat_member.first_name}</a>`
         var welcome_messages_first = [
-            `Hoşgeldin <b>${username}</b>, `,
-            `Açılın! <b>${username}</b> geldi, rica etsem`,
-            `Kimler Kimler Gelmiş, Şeref Verdiniz <b>${username}</b>, bu arada`,
+            `Hoşgeldin ${username}, `,
+            `Açılın! ${username} geldi, rica etsem`,
+            `Kimler Kimler Gelmiş, Şeref Verdiniz ${username}, bu arada`,
         ]
 
         var welcome_messages_second = [
