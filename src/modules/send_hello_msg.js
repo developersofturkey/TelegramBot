@@ -1,6 +1,7 @@
 export default (bot) => {
     bot.on('new_chat_members', (ctx) => { // yeni bir üye gruba katıldığında
         var username = ctx.message.new_chat_member.first_name  // context'den kullanıcının adını alıyoruz
+        console.log(ctx.message);
         var welcome_messages_first = [
             `Hoşgeldin <b>${username}</b>, `,
             `Açılın! <b>${username}</b> geldi, rica etsem`,
