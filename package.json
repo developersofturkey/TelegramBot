@@ -33,6 +33,8 @@
     "fs": "0.0.1-security",
     "mathjs": "^6.0.4",
     "path": "^0.12.7",
+    "rss-parser": "^3.7.2",
+    "striptags": "^3.1.1",
     "telegraf": "^3.32.0"
   },
   "devDependencies": {
